@@ -12,10 +12,10 @@ define(function (require) {
 
       var items = [{
         text: "Move/Cancel",  // Button name
-        key: "Iframe",  // Button id (unique)
+        key: "IframeCancellationButton",  // Button id (unique)
         content: {
-          moduleName: "Iframe",
-          controlName: "Iframe"
+          moduleName: "IframeCancellationButton",
+          controlName: "IframeCancellationButton"
         },
         class: "pwp-custom-btn"
       }];
@@ -45,8 +45,8 @@ define(function (require) {
       localStorage.setItem('move_cancel_selected_order_info', JSON.stringify(selectedOrderInfo));
 
       var win = new wind({
-        moduleName: "Iframe",
-        windowName: "Iframe",
+        moduleName: "IframeCancellationButton",
+        windowName: "IframeCancellationButton",
         title: "Move/Cancel",
         closeOnEscape: false,
         closeOnBackDrop: false,
