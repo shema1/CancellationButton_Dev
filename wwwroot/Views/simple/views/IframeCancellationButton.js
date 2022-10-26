@@ -15,9 +15,9 @@ var IframeCancellationButtonView = function ($scope) {
   xmlHttp2.setRequestHeader('Authorization', `Bearer ${token}`);
   xmlHttp2.send(null);
   let AppToken = xmlHttp2.responseText.replace('"', '');
-
+  console.log("AppToken AppTokenAppToken", AppToken)
   var appFrame = document.getElementById("appFrame");
 
-  appFrame.src = `https://Devcancellationbutton.autonative.com/?token=${AppToken}&orderId=${orderInfo.OrderId}&email=${session.userName}`
+  appFrame.src = `http://localhost:2000/?token=${AppToken}&orderId=${orderInfo.OrderId}&email=${session.userName}`
 
 };
