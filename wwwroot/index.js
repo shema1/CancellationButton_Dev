@@ -11,7 +11,7 @@ define(function (require) {
     this.getItems = () => {
 
       var items = [{
-        text: "Move/Cancel 2",  // Button name
+        text: "Move/Cancel",  // Button name
         key: "IframeCancellationButton",  // Button id (unique)
         content: {
           moduleName: "IframeCancellationButton",
