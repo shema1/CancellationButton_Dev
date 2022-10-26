@@ -1,4 +1,4 @@
-var IframeView = function ($scope) {
+var IframeCancellationButtonView = function ($scope) {
 
   const orderInfo = JSON.parse(localStorage.getItem('move_cancel_selected_order_info'));
 
