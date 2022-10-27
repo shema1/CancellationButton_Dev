@@ -14,6 +14,7 @@ var IframeCancellationButtonView = function ($scope) {
   xmlHttp2.open("GET", `${session.server}/api/extensions/getTemporaryToken?applicationId=${cancellationApp.ApplicationInstallationId}`, false);
   xmlHttp2.setRequestHeader('Authorization', `Bearer ${token}`);
   xmlHttp2.send(null);
+  console.log("xmlHttp2.responseText", xmlHttp2.responseText)
   let AppToken = xmlHttp2.responseText.replace('"', '');
   console.log("AppToken AppTokenAppToken", AppToken)
   var appFrame = document.getElementById("appFrame");
