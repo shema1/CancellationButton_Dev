@@ -4,10 +4,11 @@
 define(function (require) {
 
   const wind = require('core/Window');
-
+  const dialogs = require("core/dialogs");
   const placeholderManager = require("core/placeholderManager");
 
   var LookupPlaceholder = function ($scope, $element, controlService, openOrdersService, $http, $timeout, $compile) {
+    let winAction = null
     this.getItems = () => {
 
       var items = [{
@@ -29,7 +30,6 @@ define(function (require) {
 
     this.onClick = function () {
 
-      const dialogs = require("core/dialogs");
       const scope = $scope.$parent;
 
       const items = scope.viewStats.selected_orders;
@@ -59,7 +59,20 @@ define(function (require) {
       });
 
       win.open();
+      winAction = win
     };
+
+    window.addEventListener('message', function (e) {
+      const data = JSON.parse(e.data);
+      if (data.cancel) {
+        winAction.close()
+      }
+      if (data.successMessage) {
+        winAction.close()
+        const message = data.successMessage?.length ? `New orders ${data.successMessage.join(', ')}` : 'SUCCESS'
+        dialogs.addNotify(message, "SUCCESS");
+      }
+    });
 
   }
 
