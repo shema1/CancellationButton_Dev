@@ -53,7 +53,7 @@ define(function (require) {
         data: {
           selectedOrderInfo
         },
-        width: "800px",
+        width: "1100px",
         height: "600px",
         ngScope: $scope,
       });
