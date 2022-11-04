@@ -18,7 +18,7 @@ define(function (require) {
           moduleName: "IframeCancellationButton",
           controlName: "IframeCancellationButton"
         },
-        class: "pwp-custom-btn"
+        class: "move-cancel-btn"
       }];
 
       return items;
