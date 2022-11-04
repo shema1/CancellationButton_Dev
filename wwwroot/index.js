@@ -80,5 +80,23 @@ define(function (require) {
 
   $(document).ready(function ($scope, sessionManagerService) {
 
+    const findAndAddStyle = () => {
+      const targetNode = document.querySelectorAll('[key="Iframe2"]');
+      if (targetNode?.length) {
+        const btn = targetNode[0]
+        btn.style.backgroundColor = "#4867df"
+        btn.style.color = "#ffff"
+        btn.style.border = "1px solid #4867df"
+
+        clearInterval(interval)
+      }
+    }
+
+    const interval = setInterval(findAndAddStyle, 1000);
+    
+    setTimeout(() => {
+      clearInterval(interval)
+    }, 10000)
+
   })
 });
