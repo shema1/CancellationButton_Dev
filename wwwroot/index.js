@@ -14,6 +14,7 @@ define(function (require) {
       var items = [{
         text: "Move/Cancel",  // Button name
         key: "IframeCancellationButton",  // Button id (unique)
+        icon: "fa fa-cubes",
         content: {
           moduleName: "IframeCancellationButton",
           controlName: "IframeCancellationButton"
@@ -93,7 +94,7 @@ define(function (require) {
     }
 
     const interval = setInterval(findAndAddStyle, 1000);
-    
+
     setTimeout(() => {
       clearInterval(interval)
     }, 10000)
