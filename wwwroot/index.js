@@ -82,7 +82,7 @@ define(function (require) {
   $(document).ready(function ($scope, sessionManagerService) {
 
     const findAndAddStyle = () => {
-      const targetNode = document.querySelectorAll('[key="Iframe2"]');
+      const targetNode = document.querySelectorAll('[key="IframeCancellationButton"]');
       if (targetNode?.length) {
         const btn = targetNode[0]
         btn.style.backgroundColor = "#4867df"
