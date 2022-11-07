@@ -82,7 +82,7 @@ define(function (require) {
   $(document).ready(function ($scope, sessionManagerService) {
 
     const findAndAddStyle = () => {
-      const targetNode = document.querySelectorAll('[key="IframeCancellationButton"]');
+      const targetNode = document?.querySelectorAll('[key="IframeCancellationButton"]');
       console.log("targetNode", targetNode)
       if (targetNode?.length) {
         const btn = targetNode[0]
@@ -98,7 +98,7 @@ define(function (require) {
 
     setTimeout(() => {
       clearInterval(interval)
-    }, 10000)
+    }, 30000)
 
   })
 });
