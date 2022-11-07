@@ -83,7 +83,6 @@ define(function (require) {
 
     const findAndAddStyle = () => {
       const targetNode = document?.querySelectorAll('[key="IframeCancellationButton"]');
-      console.log("targetNode", targetNode)
       if (targetNode?.length) {
         const btn = targetNode[0]
         btn.style.backgroundColor = "#4867df"
