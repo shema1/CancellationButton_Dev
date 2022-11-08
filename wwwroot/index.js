@@ -81,23 +81,23 @@ define(function (require) {
 
   $(document).ready(function ($scope, sessionManagerService) {
 
-    const findAndAddStyle = () => {
-      const targetNode = document?.querySelectorAll('[key="IframeCancellationButton"]');
-      if (targetNode?.length) {
-        const btn = targetNode[0]
-        btn.style.backgroundColor = "#4867df"
-        btn.style.color = "#ffff"
-        btn.style.border = "1px solid #4867df"
+    // const findAndAddStyle = () => {
+    //   const targetNode = document?.querySelectorAll('[key="IframeCancellationButton"]');
+    //   if (targetNode?.length) {
+    //     const btn = targetNode[0]
+    //     btn.style.backgroundColor = "#4867df"
+    //     btn.style.color = "#ffff"
+    //     btn.style.border = "1px solid #4867df"
 
-        clearInterval(interval)
-      }
-    }
+    //     clearInterval(interval)
+    //   }
+    // }
 
-    const interval = setInterval(findAndAddStyle, 500);
+    // const interval = setInterval(findAndAddStyle, 500);
 
-    setTimeout(() => {
-      clearInterval(interval)
-    }, 30000)
+    // setTimeout(() => {
+    //   clearInterval(interval)
+    // }, 30000)
 
   })
 });
