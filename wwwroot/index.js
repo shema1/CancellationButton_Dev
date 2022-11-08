@@ -95,9 +95,5 @@ define(function (require) {
 
     const interval = setInterval(findAndAddStyle, 500);
 
-    setTimeout(() => {
-      clearInterval(interval)
-    }, 30000)
-
   })
 });
